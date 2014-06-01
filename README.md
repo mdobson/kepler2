@@ -15,9 +15,80 @@ Kepler2 is an evolution of Kepler. An open source Research and Data Collection p
 ##Objects
 
 ###Users
+```
+  {
+    "class": ["user"],
+    "properties": {
+      "firstName":"Matthew",
+      "lastName":"Dobson",
+      "title":"Engineer",
+      "username":"mdobson"
+    },
+    "entities": [
+    ],
+    "actions":[
+    ],
+    "links": [
+      { "rel":["self"], "href":"http://kepler.io/users/mdobson" },
+      { "rel":["index"], "href":"http://kepler.io/" }
+    ]
+  }
+```
+
 ###Forms
+```
+  {
+    "class": ["form"],
+    "properties": {
+
+    },
+    "entities": [
+    
+    ],
+    "actions":[
+    
+    ],
+    "links": [
+
+    ]
+  }
+```
 ###Questions
+```
+  {
+    "class": ["question"],
+    "properties": {
+
+    },
+    "entities": [
+    
+    ],
+    "actions":[
+    
+    ],
+    "links": [
+
+    ]
+  }
+```
 ###Responses
+```
+  {
+    "class": ["response"],
+    "properties": {
+
+    },
+    "entities": [
+    
+    ],
+    "actions":[
+    
+    ],
+    "links": [
+
+    ]
+  }
+```
 
 ##Installation
 
