@@ -15,6 +15,10 @@ Kepler2 is an evolution of Kepler. An open source Research and Data Collection p
 ##Objects
 
 ###Users
+
+The users object will contain relevant personal details as granted by the API. It will also contain
+links to each project in the links category. The actions section will contain standard user interactions.
+
 ```
   {
     "class": ["user"],
@@ -35,7 +39,35 @@ Kepler2 is an evolution of Kepler. An open source Research and Data Collection p
   }
 ```
 
+###Flows
+
+Flows will be the central work horse of the new Kepler system. It will allow users to define conditional pieces of logic
+that will allow them to essentially create decision trees when collecting their data. Flows will be dynamically updated based on the
+data collected.
+
+```
+{
+  "class": ["flow"],
+  "properties": {
+
+  },
+  "entities": [
+
+  ],
+  "actions":[
+
+  ],
+  "links": [
+
+  ]
+}
+
+```
+
 ###Forms
+
+Forms will be steps in a flow of questions. Each form presented will be dynamically generated based on responses collected before it.
+
 ```
   {
     "class": ["form"],
@@ -43,17 +75,21 @@ Kepler2 is an evolution of Kepler. An open source Research and Data Collection p
 
     },
     "entities": [
-    
+
     ],
     "actions":[
-    
+
     ],
     "links": [
 
     ]
   }
 ```
+
 ###Questions
+
+Individual questions will be the units of data collection. Each will affect the next step in the flow as defined by the user.
+
 ```
   {
     "class": ["question"],
@@ -61,17 +97,22 @@ Kepler2 is an evolution of Kepler. An open source Research and Data Collection p
 
     },
     "entities": [
-    
+
     ],
     "actions":[
-    
+
     ],
     "links": [
 
     ]
   }
 ```
+
 ###Responses
+
+Responses to questions and forms will be dynamically generated based on data collected. This could include unit conversions
+or internationalization. These will have clear relation to the particular questions they answer.
+
 ```
   {
     "class": ["response"],
@@ -79,10 +120,10 @@ Kepler2 is an evolution of Kepler. An open source Research and Data Collection p
 
     },
     "entities": [
-    
+
     ],
     "actions":[
-    
+
     ],
     "links": [
 
@@ -106,7 +147,7 @@ Currently it's in the design phase.
 
 ###Contributions
 
-Please just create a new branch and issue a pull request with a descriptive message. 
+Please just create a new branch and issue a pull request with a descriptive message.
 
 ###License
 
