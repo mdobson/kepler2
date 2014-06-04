@@ -72,6 +72,45 @@ Projects are simply groupings on users, flows, forms, etc. Essentially a project
       "name":"Community Research",
     },
     "entities": [
+      {
+        "class":["flow"],
+        "rel":["item"],
+        "properties": {
+          "name":"Community Garden Questions"
+        },
+        "links": [
+          {
+            "rel":["self"],
+            "href":"http://kepler.io/flows/1"
+          }
+        ]
+      },
+      {
+        "class":["flow"],
+        "rel":["item"],
+        "properties": {
+          "name":"Community Garden Self-Assesment"
+        },
+        "links": [
+          {
+            "rel":["self"],
+            "href":"http://kepler.io/flows/2"
+          }
+        ]
+      },
+      {
+        "class":["flow"],
+        "rel":["item"],
+        "properties": {
+          "name":"Community Garden Advocates"
+        },
+        "links": [
+          {
+            "rel":["self"],
+            "href":"http://kepler.io/flows/3"
+          }
+        ]
+      }
     ],
     "actions":[
       {
@@ -119,7 +158,7 @@ Think of flows as if they are decision trees. Multiple paths can be traversed ba
   "entities": [
     {
       "class": ["form"],
-      "rel": ["item", "http://rels.kepler.io/form"],
+      "rel": ["item"],
       "links": {
         "rel": ["self"],
         "href": "http://kepler.io/forms/1"
@@ -127,7 +166,7 @@ Think of flows as if they are decision trees. Multiple paths can be traversed ba
     },
     {
       "class": ["form"],
-      "rel": ["item", "http://rels.kepler.io/form"],
+      "rel": ["item"],
       "links": {
         "rel": ["self"],
         "href": "http://kepler.io/forms/2"
@@ -135,7 +174,7 @@ Think of flows as if they are decision trees. Multiple paths can be traversed ba
     },
     {
       "class": ["form"],
-      "rel": ["item", "http://rels.kepler.io/form"],
+      "rel": ["item"],
       "links": {
         "rel": ["self"],
         "href": "http://kepler.io/forms/3"
@@ -202,16 +241,77 @@ Forms will be steps in a flow of questions. Each form presented will be dynamica
   {
     "class": ["form"],
     "properties": {
-
+      "name":"Community Garden Advocates Form",
+      "description":"Collect information on advocates for community gardening.",
+      "editable": true
     },
     "entities": [
-
+      {
+        "class":["question"],
+        "rel":["item"],
+        "properties":{
+          "name":"What's their name?",
+          "type":"text",
+          "required":true
+        },
+        "links":[
+          {
+            "rel":["self"],
+            "href":"http://kepler.io/questions/1"
+          }
+        ]
+      }
     ],
     "actions":[
-
+      {
+        "name":"add-questions",
+        "title":"Add a question to the form",
+        "method":"PATCH",
+        "href":"http://kepler.io/forms/3",
+        "type":"application/json",
+        "fields": [
+          {
+            "name":"name",
+            "type":"text"
+          },
+          {
+            "name":"type",
+            "type":"radio"
+          },
+          {
+            "name":"required",
+            "type":"checkbox"
+          }
+        ]
+      },
+      {
+        "name":"disable-editing",
+        "title":"Disable Editing",
+        "method":"PATCH",
+        "href":"http://kepler.io/flows/1",
+        "type":"application/json",
+        "fields": [
+          {
+            "name":"editable",
+            "type":"hidden",
+            "value":false
+          }
+        ]
+      }
     ],
     "links": [
-
+      {
+        "rel":["index"],
+        "href":"http://kepler.io/forms"
+      },
+      {
+        "rel":["self"],
+        "href":"http://kepler.io/forms/3"
+      },
+      {
+        "rel":["up"],
+        "href":"http://kepler.io/flows/3"
+      }
     ]
   }
 ```
@@ -223,8 +323,10 @@ Individual questions will be the units of data collection. Each will affect the 
 ```
   {
     "class": ["question"],
-    "properties": {
-
+    "properties":{
+      "name":"What's their name?",
+      "type":"text",
+      "required":true
     },
     "entities": [
 
@@ -233,7 +335,22 @@ Individual questions will be the units of data collection. Each will affect the 
 
     ],
     "links": [
-
+      {
+        "rel":["up"],
+        "href":"http://kepler.io/forms/3"
+      },
+      {
+        "rel":["self"],
+        "href":"http://kepler.io/questions/1"
+      },
+      {
+        "rel":["index"],
+        "href":"http://kepler.io/questions"
+      },
+      {
+        "rel":["related"],
+        "href":"http://kepler.io/responses/1"
+      }
     ]
   }
 ```
