@@ -332,7 +332,19 @@ Individual questions will be the units of data collection. Each will affect the 
 
     ],
     "actions":[
-
+      {
+        "name":"answer-question",
+        "title":"Answer Question",
+        "method":"POST",
+        "href":"http://kepler.io/questions/1",
+        "type":"application/json",
+        "fields": [
+          {
+            "name":"answer",
+            "type":"text"
+          }
+        ]
+      }
     ],
     "links": [
       {
@@ -346,10 +358,6 @@ Individual questions will be the units of data collection. Each will affect the 
       {
         "rel":["index"],
         "href":"http://kepler.io/questions"
-      },
-      {
-        "rel":["related"],
-        "href":"http://kepler.io/responses/1"
       }
     ]
   }
@@ -359,6 +367,8 @@ Individual questions will be the units of data collection. Each will affect the 
 
 Responses to questions and forms will be dynamically generated based on data collected. This could include unit conversions
 or internationalization. These will have clear relation to the particular questions they answer.
+
+Design TBD
 
 ```
   {
