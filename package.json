@@ -1,0 +1,26 @@
+{
+  "name": "kepler2",
+  "version": "0.0.0",
+  "description": "An API based solution to open research.",
+  "main": "index.js",
+  "scripts": {
+    "test": "TBD"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdobson/kepler2.git"
+  },
+  "keywords": [
+    "Kepler2",
+    "research",
+    "data",
+    "civic",
+    "hacking"
+  ],
+  "author": "Matthew Dobson <@mdobs>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdobson/kepler2/issues"
+  },
+  "homepage": "https://github.com/mdobson/kepler2"
+}
