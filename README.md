@@ -1,6 +1,6 @@
 #Kepler2: Structure Community Projects
 
-##Current Phase: API Design
+##Current Phase: Active Development of Alpha
 
 ##Table of contents
 
