@@ -30,7 +30,7 @@ for any new projects. It will also look to expose an API for your data after you
 The users object will contain relevant personal details as granted by the API. It will also contain
 links to each project in the links category. The actions section will contain standard user interactions.
 
-```
+```json
   {
     "class": ["user"],
     "properties": {
@@ -65,7 +65,7 @@ links to each project in the links category. The actions section will contain st
 
 Projects are simply groupings on users, flows, forms, etc. Essentially a project is a general repository for your research.
 
-```
+```json
   {
     "class": ["project"],
     "properties": {
@@ -147,7 +147,7 @@ data collected.
 
 Think of flows as if they are decision trees. Multiple paths can be traversed based on the answers given.
 
-```
+```json
 {
   "class": ["flow"],
   "properties": {
@@ -237,7 +237,7 @@ Think of flows as if they are decision trees. Multiple paths can be traversed ba
 
 Forms will be steps in a flow of questions. Each form presented will be dynamically generated based on responses collected before it.
 
-```
+```json
   {
     "class": ["form"],
     "properties": {
@@ -320,7 +320,7 @@ Forms will be steps in a flow of questions. Each form presented will be dynamica
 
 Individual questions will be the units of data collection. Each will affect the next step in the flow as defined by the user.
 
-```
+```json
   {
     "class": ["question"],
     "properties":{
@@ -370,7 +370,7 @@ or internationalization. These will have clear relation to the particular questi
 
 Design TBD
 
-```
+```json
   {
     "class": ["response"],
     "properties": {
