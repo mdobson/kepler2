@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/mdobson/kepler2",
   "dependencies": {
-    "argo": "^0.4.9"
+    "argo": "^0.4.9",
+    "argo-resource": "0.0.11"
   }
 }
