@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/mdobson/kepler2/issues"
   },
-  "homepage": "https://github.com/mdobson/kepler2"
+  "homepage": "https://github.com/mdobson/kepler2",
+  "dependencies": {
+    "argo": "^0.4.9"
+  }
 }
