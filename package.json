@@ -26,10 +26,10 @@
   "dependencies": {
     "argo": "^0.4.9",
     "argo-resource": "0.0.11",
-    "pg": "^3.3.0",
     "argo-formatter-siren": "0.0.0",
     "titan": "^0.1.1",
     "grunt": "^0.4.5",
-    "grunt-db-migrate": "^0.2.0"
+    "grunt-db-migrate": "^0.2.0",
+    "orm": "^2.1.15"
   }
 }
